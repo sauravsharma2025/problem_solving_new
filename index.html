@@ -7,6 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!--
+        Step1 : Create a function that accept how many numbers of rows we want to print.
+        Step1 : Iterate a loop  that will responsible for printing rows.
+        Step2 : Iterate  a another loop that will print required star in decreasing by one .
+        Step3 : At last you will get star printed.
+      -->
 </body>
 </html>
+<script>
+    function starPrint (n){
+        for(let i=n;i>=1;i--){
+            for(let j=1;j<=i;j++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+    starPrint(9);
+</script>
