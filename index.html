@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- 
+        Step1:Sort the  given array.
+        Step2:for smallest arr[kth-1] and for largest element arr.length-kth+1
+      
+     -->
 </body>
 </html>
+<script>
+    const arr = [2,1,4,3,6,5,7];
+     function findKthSmallestOrLargest(arr,k){
+        arr.sort();
+
+        
+console.log('SK@',arr);
+        return {smallest:arr[k-1], largest:arr.length-k+1}
+    }
+    console.log('SK@',findKthSmallestOrLargest(arr,2));
+</script>
