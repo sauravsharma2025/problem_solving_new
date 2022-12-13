@@ -17,3 +17,36 @@
      -->
 </body>
 </html>
+<script>
+    let matrix = [[1,2,3],[4,5,6],[7,8,9]]
+//     let myNewArr=[];
+//     let temp=[];
+   
+//         for(let i=0;i<matrix[0].length;i++){
+//         for(let j=0;j<matrix.length;j++){
+//     // for(let i=matrix.length-1;i>=;i--){
+//          [temp.push(matrix[j][i])];
+   
+//     }
+
+//     } 
+    
+   
+//     myNewArr.push([temp])
+// console.log('SK@',myNewArr);
+//    console.log('SK@',myNewArr);
+for(let i=0;i<matrix.length;i++){
+    matrix[i].reverse();
+}
+console.log('SK@',matrix[0][1]);
+for(let j=0;j<matrix.length;j++){
+    for( let k=j;k<matrix.length;k++){
+       
+        let temp=matrix[j][k];
+        matrix[j][k]=matrix[k][j];
+        matrix[k][j]=temp;
+    }
+}
+
+console.log('SK@',matrix);
+</script>
