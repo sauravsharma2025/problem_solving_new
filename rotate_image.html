@@ -18,14 +18,14 @@
 </body>
 </html>
 <script>
-    let matrix = [[1,2,3],[4,5,6],[7,8,9]]
+   
 //     let myNewArr=[];
 //     let temp=[];
    
-//         for(let i=0;i<matrix[0].length;i++){
-//         for(let j=0;j<matrix.length;j++){
-//     // for(let i=matrix.length-1;i>=;i--){
-//          [temp.push(matrix[j][i])];
+//         for(let i=0;i<mat[0].length;i++){
+//         for(let j=0;j<mat.length;j++){
+//     // for(let i=mat.length-1;i>=;i--){
+//          [temp.push(mat[j][i])];
    
 //     }
 
@@ -35,18 +35,38 @@
 //     myNewArr.push([temp])
 // console.log('SK@',myNewArr);
 //    console.log('SK@',myNewArr);
-for(let i=0;i<matrix.length;i++){
-    matrix[i].reverse();
-}
-console.log('SK@',matrix[0][1]);
-for(let j=0;j<matrix.length;j++){
-    for( let k=j;k<matrix.length;k++){
-       
-        let temp=matrix[j][k];
-        matrix[j][k]=matrix[k][j];
-        matrix[k][j]=temp;
-    }
-}
 
-console.log('SK@',matrix);
+
+let mat = [[1,2,3],[4,5,6],[7,8,9]]
+
+// console.log('SK@',mat);
+// for(let i = 0; i < mat.length; i++){
+//         mat[i].reverse()
+//     }
+     
+//     // make transpose of the mat
+//     for(let i = 0; i < mat.length; i++){
+//         for(let j = 0; j < mat.length; j++){
+//             console.log('SK@50',{i:mat[i][j]},{j:mat[j][i]});
+//             // swapping mat[i][j] and mat[j][i]
+//             let temp = mat[i][j]
+//             mat[i][j] = mat[j][i]
+//             mat[j][i] = temp
+//         }
+//     }
+
+// console.log('SK@',mat);
+
+var rotate = function(matrix) {
+    for(let r= 0; r < matrix.length; r++){
+        for(let c = r; c<matrix[0].length;c++){
+            [matrix[r][c], matrix[c][r]] = [matrix[c][r], matrix[r][c]];
+        }
+    }
+    for(let row of matrix){
+        row.reverse();
+    }
+return matrix
+};
+console.log('SK@',rotate(mat));
 </script>
